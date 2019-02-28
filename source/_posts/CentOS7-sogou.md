@@ -15,7 +15,7 @@ sudo yum -y install epel-release.noarch
 # 安装fcitx
 ## 安装fcitx及相关工具
 ```
-sudo yum install qtwebkit alien dpkg opencc redhat-lsb fcitx fcitx-pinyin fcitx-configtool im-chooser
+sudo yum install fcitx fcitx-pinyin fcitx-configtool im-chooser
 ```
 ## 结束ibus进程
 ```
@@ -42,11 +42,12 @@ export XIM=fcitx
 选择Linux 64位版本,下载的文件名类似:sogoupinyin_2.2.0.0108_amd64.deb
 ## 转换deb为rpm包
 ```
-sudo yum install alien
+sudo yum install dpkg alien
 sudo alien -vcr sogoupinyin_2.2.0.0108_amd64.deb
 ```
 ## 安装搜狗拼音输入法
 ```
+sudo yum install qtwebkit opencc redhat-lsb
 sudo rpm -ivh --force sogoupinyin-2.2.0.0108-2.x86_64.rpm
 cp /usr/lib/x86_64-linux-gnu/fcitx/fcitx-sogoupinyin.so /usr/lib64/fcitx/
 ```
